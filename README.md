@@ -1,11 +1,8 @@
-# StoreOps Agentic AI: Associate Copilot PoW
+# StoreOps: Inventory Discrepancy & Task Optimization
 
-Machine learning is great, but as Mani Pantangi recently noted, real operational readiness requires prioritizing **"Tools over models."** 
+In high-volume retail environments, associates juggle customer queries, shelf replenishment, and localized stock discrepancies. 
 
-I built this Proof of Work for the Associate Data Scientist role to demonstrate how I would bridge advanced analytics with Agentic AI to solve real-world Home Depot Store Operations problems.
+This repository models a lightweight operational analytics layer designed to bridge store telemetry with associate task workflows:
+1. **Discrepancy Analytics (`inventory_risk.sql`):** Identifies high-shrink, low-stock bays where velocity outpaces automated inventory counts.
+2. **Function-Calling Task Dispatcher (`copilot_dispatcher.py`):** Uses structured function schemas to route operational intents to analytical queries.
 
-## The Architecture
-1. **The Context Layer (`bigquery_inventory_optimization.sql`):** 
-   A foundational SQL pipeline (simulating BigQuery) that creates the "truth" for the agent—identifying out-of-stock risks and associate scheduling gaps.
-2. **The Agentic Tool (`store_associate_agent.py`):** 
-   A Python-based semantic router that takes a store associate's natural language query (e.g., *"Where is the overflow for SKU 123?"*) and routes it to the correct deterministic SQL tool, reducing hallucinations and driving real operational impact.

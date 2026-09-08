@@ -1,0 +1,1 @@
+# storeops-agentic-copilot
